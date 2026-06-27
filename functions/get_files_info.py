@@ -1,5 +1,16 @@
+from functools import partial
 import os
 
+
+def record_directory(child_content:str, parent_dir) -> str:
+  child_dir = os.path.join(parent_dir, child_content)
+  is_dir = os.path.isdir(child_dir)
+  size = os.path.getsize(child_dir)
+  
+  result = f"- {child_content}: file_size={size}, is_dir={is_dir}"
+  
+  return result
+  
 
 def get_files_info(working_directory: str, directory: str = ".") -> str:
   try:
@@ -16,7 +27,11 @@ def get_files_info(working_directory: str, directory: str = ".") -> str:
     if not target_dir_exists:
       return f'Error: "{directory}" is not a directory'
     
-    return f'Success: "{directory}" is within the working directory'
+    target_dir_content = os.listdir(target_dir)
+    
+    target_dir_content_details = "\n".join(list(map(partial(record_directory, parent_dir=target_dir), target_dir_content)))
+        
+    return target_dir_content_details
   except Exception as error:
     return f"Error: {error}"
 

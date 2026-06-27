@@ -1,0 +1,224 @@
+[
+    {
+        "label": "runpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "runpy",
+        "description": "runpy",
+        "detail": "runpy",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "genai",
+        "importPath": "google",
+        "description": "google",
+        "isExtraImport": true,
+        "detail": "google",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"amar-code\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"amar-code\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"amar-code\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"amar-code\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"amar-code\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "api_key",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "api_key = os.environ.get('GEMINI_API_KEY')\nif not api_key:\n    raise RuntimeError(\"`GEMINI_API_KEY` is not found.\")\n# Create genai client\nclient = genai.Client(api_key=api_key)\n# Setup argparse\narg_parser = argparse.ArgumentParser(description=\"Amar Code CLI\")\n# Set arguments\narg_parser.add_argument(\"prompt\", type=str, help=\"User prompt\")\n# Parse arguments",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "client = genai.Client(api_key=api_key)\n# Setup argparse\narg_parser = argparse.ArgumentParser(description=\"Amar Code CLI\")\n# Set arguments\narg_parser.add_argument(\"prompt\", type=str, help=\"User prompt\")\n# Parse arguments\nargs = arg_parser.parse_args()\n# Get user prompt\nprompt = args.prompt\nresponse = client.models.generate_content(model=\"gemini-2.5-flash\", contents=prompt)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "arg_parser",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "arg_parser = argparse.ArgumentParser(description=\"Amar Code CLI\")\n# Set arguments\narg_parser.add_argument(\"prompt\", type=str, help=\"User prompt\")\n# Parse arguments\nargs = arg_parser.parse_args()\n# Get user prompt\nprompt = args.prompt\nresponse = client.models.generate_content(model=\"gemini-2.5-flash\", contents=prompt)\nif response.usage_metadata is None:\n    raise RuntimeError(\"Request failed as `usage_metadata` not found.\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "args",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "args = arg_parser.parse_args()\n# Get user prompt\nprompt = args.prompt\nresponse = client.models.generate_content(model=\"gemini-2.5-flash\", contents=prompt)\nif response.usage_metadata is None:\n    raise RuntimeError(\"Request failed as `usage_metadata` not found.\")\nprompt_token = response.usage_metadata.prompt_token_count\nresponse_token = response.usage_metadata.candidates_token_count\nprint(f\"Prompt tokens: {prompt_token}\")\nprint(f\"Response tokens: {response_token}\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "prompt",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "prompt = args.prompt\nresponse = client.models.generate_content(model=\"gemini-2.5-flash\", contents=prompt)\nif response.usage_metadata is None:\n    raise RuntimeError(\"Request failed as `usage_metadata` not found.\")\nprompt_token = response.usage_metadata.prompt_token_count\nresponse_token = response.usage_metadata.candidates_token_count\nprint(f\"Prompt tokens: {prompt_token}\")\nprint(f\"Response tokens: {response_token}\")\nprint(response.text)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "response",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "response = client.models.generate_content(model=\"gemini-2.5-flash\", contents=prompt)\nif response.usage_metadata is None:\n    raise RuntimeError(\"Request failed as `usage_metadata` not found.\")\nprompt_token = response.usage_metadata.prompt_token_count\nresponse_token = response.usage_metadata.candidates_token_count\nprint(f\"Prompt tokens: {prompt_token}\")\nprint(f\"Response tokens: {response_token}\")\nprint(response.text)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "prompt_token",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "prompt_token = response.usage_metadata.prompt_token_count\nresponse_token = response.usage_metadata.candidates_token_count\nprint(f\"Prompt tokens: {prompt_token}\")\nprint(f\"Response tokens: {response_token}\")\nprint(response.text)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "response_token",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "response_token = response.usage_metadata.candidates_token_count\nprint(f\"Prompt tokens: {prompt_token}\")\nprint(f\"Response tokens: {response_token}\")\nprint(response.text)",
+        "detail": "main",
+        "documentation": {}
+    }
+]
